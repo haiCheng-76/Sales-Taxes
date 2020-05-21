@@ -73,3 +73,7 @@ Write an application that prints out the receipt details for these shopping bask
 * 1 box of imported chocolates: 11.85
 * Sales Taxes: 6.70
 * Total: 74.68
+
+### 拓展点
+1. 税率的独立配置，避免重启服务
+2. 加入熔断器，避免对接口的狂刷（接口保护）

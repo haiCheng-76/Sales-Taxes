@@ -23,15 +23,15 @@
 * 注册中心地址：http://127.0.0.1:8761/
 * 主页：http://127.0.0.1:8765/
 
-![img](./img/coding.png)
+![](https://ftp.bmp.ovh/imgs/2020/05/3b70de42c7d32e8f.png)
 
 ### 测试结果
 * 第一组数据
-![img](./img/input1.png)
+![](https://ftp.bmp.ovh/imgs/2020/05/9601998786547cd2.png)
 * 第二组数据
-![img](./img/input2.png)
+![](https://ftp.bmp.ovh/imgs/2020/05/0bfc9383901cb2de.png)
 * 第三组数据
-![img](./img/input3.png)
+![](https://ftp.bmp.ovh/imgs/2020/05/f16f9649e32ccecd.png)
 
 ### 原题
 Basic sales tax is applicable at a rate of 10% on all goods, except books, food, and medical products that are exempt. Import duty is an additional sales tax applicable on all imported goods at a rate of 5%, with no exemptions.
@@ -73,7 +73,3 @@ Write an application that prints out the receipt details for these shopping bask
 * 1 box of imported chocolates: 11.85
 * Sales Taxes: 6.70
 * Total: 74.68
-
-### 拓展点
-1. 税率的独立配置，避免重启服务
-2. 加入熔断器，避免对接口的狂刷（接口保护）

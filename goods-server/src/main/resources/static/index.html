@@ -58,7 +58,6 @@
             </el-form-item>
         </el-form>
     </div>
-    <!--    -->
     <hr>
     <div id="table">
         <el-table
@@ -208,6 +207,7 @@
                 });
             },
             resetGoodsInfo() {
+                $("#table").hide();
                 var vm = this;
                 $.ajax({
                     type: "GET",

@@ -1,7 +1,6 @@
 package website.lhc.calculateserver.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +9,7 @@ import website.lhc.calculateserver.model.Goods;
 import website.lhc.calculateserver.service.TaxService;
 import website.lhc.calculateserver.vo.GoodsTaxVo;
 import website.lhc.commoserver.base.Resp;
+import website.lhc.commoserver.util.Assert;
 
 import java.util.List;
 
@@ -30,9 +30,7 @@ public class TaxController {
 
     @PostMapping(value = "/getResult")
     public Resp getResult(@RequestBody List<Goods> goodsList) {
-        if (CollectionUtils.isEmpty(goodsList)) {
-            return Resp.error("数据为空");
-        }
+        Assert.isCollectionEmpty(goodsList, "数据为空");
         GoodsTaxVo vo = taxService.getResult(goodsList);
         return Resp.ok(vo);
     }

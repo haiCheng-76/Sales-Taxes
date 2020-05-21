@@ -5,7 +5,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import website.lhc.commoserver.base.Resp;
-import website.lhc.commoserver.exceptions.ServerException;
+import website.lhc.commoserver.exceptions.CalculateServerException;
+import website.lhc.commoserver.exceptions.ParamException;
 
 /**
  * @ProjectName: coding
@@ -20,12 +21,16 @@ public class ServerExceptionHandle {
 
     private static final Logger log = LoggerFactory.getLogger(ServerExceptionHandle.class);
 
-    @ExceptionHandler(value = {RuntimeException.class, ServerException.class})
-    public Resp exceptionHandler(Exception e) {
+    @ExceptionHandler(value = {CalculateServerException.class})
+    public Resp exceptionHandler(CalculateServerException e) {
         log.warn("exception:{}", e.getMessage());
         e.printStackTrace();
         return Resp.error("系统错误");
     }
 
-
+    @ExceptionHandler(value = {ParamException.class})
+    public Resp exceptionHandler(ParamException e) {
+        log.warn("exception:{}", e.getMessage());
+        return Resp.error(e.getMessage());
+    }
 }

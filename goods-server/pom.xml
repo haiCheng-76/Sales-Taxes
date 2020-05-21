@@ -32,7 +32,7 @@
         </dependency>
         <dependency>
             <groupId>website.lhc</groupId>
-            <artifactId>commo-server</artifactId>
+            <artifactId>commo</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>

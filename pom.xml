@@ -45,6 +45,6 @@
         <module>eureka-server</module>
         <module>goods-server</module>
         <module>calculate-server</module>
-        <module>commo-server</module>
+        <module>commo</module>
     </modules>
 </project>
